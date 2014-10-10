@@ -23,17 +23,17 @@ EAO.ui.Calendar(year, month, targetElement)
 
 ```javascript
 var
-  calendar = EAO.ui.Calendar(2014, 10, document.getElementById("div1")),
-  day = calendar.day(10);
+  calendar = EAO.ui.Calendar(2014, 9, document.getElementById("div1")),
+  day = calendar.day(8);
 
 day.story("Version 2.2.0 released", "https://github.com/erosanwar/eao"); // Set story. 
-day.listen("click", function (event) { alert("Hello 2.2.0"); }); // Add event. 
+day.listen("click", function (event) { alert("Hello 2.2.0!"); }); // Add event. 
 
 // or,
 
   day
     .story("Version 2.2.0 released", "https://github.com/erosanwar/eao") // Set story.
-    .listen("click", function (event) { alert("Hello 2.2.0"); }); // And add event.
+    .listen("click", function (event) { alert("Hello 2.2.0!"); }); // And add event.
 
 alert(day.story()); // Get story.
 ```
