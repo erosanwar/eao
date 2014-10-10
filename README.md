@@ -18,23 +18,25 @@ EAO.setProp(key, value)
 EAO.getProp(name)
 
 ## UI
+
+EAO.ui.Calendar(year, month, targetElement)
+
 ```javascript
 var
-  calendar = EAO.ui.Calendar(year, month, targetElement),
-  day = calendar.day(n);
+  calendar = EAO.ui.Calendar(2014, 10, document.getElementById("div1")),
+  day = calendar.day(10);
 
-day.story(description, link); // Set story.
-day.listen(type, listener[, useCapture]); // Add event.
+day.story("Version 2.2.0 released", "https://github.com/erosanwar/eao"); // Set story. 
+day.listen("click", function (event) { alert("Hello 2.2.0"); }); // Add event. 
 
 // or,
 
   day
-    .story(description, link) // Set story.
-    .listen(type, listener[, useCapture]); // And add event.
+    .story("Version 2.2.0 released", "https://github.com/erosanwar/eao") // Set story.
+    .listen("click", function (event) { alert("Hello 2.2.0"); }); // And add event.
 
-day.story(); // Get story.
+alert(day.story()); // Get story.
 ```
-
 
 ## License
 
