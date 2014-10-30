@@ -4,17 +4,44 @@ EAO Util is basically a set of functions previously used in my website, Eros Anw
 
 ## Functions
 
-EAO.setCookie(name, value, expiryHour, path)  
+EAO.cookie(name, value[, expiryHour])  
+EAO.cookie(name)  
+EAO.removeCookie(name)  
+EAO.sessionProp(sessionOnly)  
+EAO.prop(key, value)  
+EAO.prop(key)  
+EAO.removeProp(key)  
+EAO.simpleHttpRequest(url, success[, mimeType])  
+EAO.loadPropFile(url[, force])  
+EAO.Date.daysInMonth(year, month)  
+EAO.Date.julianDay(year, month, day)  
+EAO.Date.dayOfWeek(year, month, day)  
+EAO.Date.age(year, month, day)  
+EAO.Date(year, month, day)
+
+```javascript
+var date = EAO.Date(2014, 10, 30); // Returns an object with functions below.
+date.daysInMonth();
+date.julianDay();
+date.dayOfWeek();
+date.age();
+date.hijriDate();
+```
+## Deprecated
+
+I plan to remove these in version 2.6.0  
+  
+EAO.setCookie(name, value[, expiryHour[, path]])  
 EAO.getCookie(name)  
-EAO.deleteCookie(name, path)  
+EAO.deleteCookie(name[, path])  
 EAO.getDaysInMonth(year, month)  
 EAO.getJulianDay(year, month, day)  
 EAO.getDayOfWeek(year, month, day)  
 EAO.getAge(year, month, day)  
 EAO.getHijriDate(year, month, day)  
-EAO.simpleHttpRequest(url, success)
+EAO.simpleHttpRequest(url, success)  
 EAO.loadPropFile(url, force)  
-EAO.setProp(key, value)
+EAO.setProp(key, value)  
 EAO.getProp(name)
 
 ## UI
@@ -41,4 +68,3 @@ alert(day.story()); // Get story.
 ## License
 
 EAO Util is distributed under the MIT License.
-
