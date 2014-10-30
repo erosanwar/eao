@@ -29,8 +29,6 @@ date.hijriDate();
 ```
 ## Deprecated
 
-I plan to remove these in version 2.6.0  
-  
 EAO.setCookie(name, value[, expiryHour[, path]])  
 EAO.getCookie(name)  
 EAO.deleteCookie(name[, path])  
