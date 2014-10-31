@@ -27,6 +27,32 @@ date.dayOfWeek();
 date.age();
 date.hijriDate();
 ```
+## Objects
+
+EAO.cookieStorage, An object that can be used like localStorage or sessionStorage. Data will be saved as cookies.
+
+```javascript
+var cookieStorage = EAO.cookieStorage;
+
+cookieStorage.sessionOnly = true; // Make cookies available in this session only.
+
+cookieStorage.setItem("status", "Cookie storage is new."); // Set.
+cookieStorage.setItem("feel", "But it feels familiar.");
+cookieStorage.setItem("then", "Just use it.");
+
+console.log(cookieStorage.getItem("status")); // Get.
+console.log(cookieStorage.getItem("feel"));
+console.log(cookieStorage.getItem("then"));
+
+console.log("There are " + cookieStorage.length + " items in cookieStorage."); // Length.
+
+cookieStorage.removeItem("status"); // Remove.
+console.log("There are " + cookieStorage.length + " items in cookieStorage now.");
+
+cookieStorage.clear(); // Remove all cookies.
+console.log("There is " + cookieStorage.length + " item left in cookieStorage.");
+```
+
 ## Deprecated
 
 EAO.setCookie(name, value[, expiryHour[, path]])  
@@ -37,8 +63,6 @@ EAO.getJulianDay(year, month, day)
 EAO.getDayOfWeek(year, month, day)  
 EAO.getAge(year, month, day)  
 EAO.getHijriDate(year, month, day)  
-EAO.simpleHttpRequest(url, success)  
-EAO.loadPropFile(url, force)  
 EAO.setProp(key, value)  
 EAO.getProp(name)
 
